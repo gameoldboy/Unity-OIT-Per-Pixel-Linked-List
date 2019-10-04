@@ -53,7 +53,6 @@
                 float3 worldNormal : TEXCOORD3;
                 float3 worldPos : TEXCOORD4;
                 SHADOW_COORDS(5)
-                float3 worldRefl : TEXCOORD6;
             };
 
             float4 _Color;
@@ -100,7 +99,6 @@
                 TRANSFER_SHADOW(o);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
                 float3 worldViewDir = normalize(UnityWorldSpaceViewDir(o.worldPos));
-                o.worldRefl = reflect(-worldViewDir, o.worldNormal);
                 return o;
             }
 
