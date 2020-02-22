@@ -89,7 +89,6 @@
 				}
 
                 return col;
-                // return SortedPixels[0].pixelColor;
             }
             ENDCG
         }
